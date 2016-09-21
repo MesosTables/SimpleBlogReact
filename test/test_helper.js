@@ -12,6 +12,9 @@ import reducers from '../src/reducers';
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.window = global.document.defaultView;
 const $ = _$(window);
+global.navigator = {
+  userAgent : 'node.js'
+}
 
 chaiJquery(chai, chai.util, $);
 
